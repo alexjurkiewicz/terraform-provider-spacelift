@@ -41,13 +41,13 @@ func dataAWSIntegrationAttachmentExternalID() *schema.Resource {
 			},
 			"read": {
 				Type:         schema.TypeBool,
-				Description:  "whether the integration will be used for read operations",
+				Description:  "Whether the integration will be used for read operations. You must set at least one of this variable and `write`.",
 				AtLeastOneOf: []string{"read", "write"},
 				Optional:     true,
 			},
 			"write": {
 				Type:         schema.TypeBool,
-				Description:  "whether the integration will be used for write operations",
+				Description:  "Whether the integration will be used for write operations. You must set at least one of this variable and `read`.",
 				AtLeastOneOf: []string{"read", "write"},
 				Optional:     true,
 			},
